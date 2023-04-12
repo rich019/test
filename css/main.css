@@ -1,4 +1,23 @@
 body{
     background: #131313;
     color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+._wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 600px;
+}
+._title{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.jackpot{
+    background: #000000;
+    color: #7BD627;
+    padding: 10px 60px;
+    font-size: 20px;
+    min-width: 250px;
 }

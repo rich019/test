@@ -10,13 +10,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var randomNumber = Math.random() * (max - min) + min;
         var roundedNum=Math.round(randomNumber*100)/100;
         console.log(roundedNum);
-        
-        document.querySelector('.jackpot').innerHTML = totalAmount;
-        
+
+        totalAmount = parseFloat(totalAmount).toLocaleString('en');
+        document.querySelector('.jackpot').innerHTML = '$' + totalAmount;
+        totalAmount = parseFloat(totalAmount.replace(/,/g,''));
         function increment() {
             totalAmount += roundedNum;
             roundedTotalAmount=Math.round(totalAmount*100)/100;
-            document.querySelector('.jackpot').innerHTML = roundedTotalAmount;
+            roundedTotalAmount = parseFloat(roundedTotalAmount).toLocaleString('en');
+            document.querySelector('.jackpot').innerHTML = '$' + roundedTotalAmount;
+            roundedTotalAmount = parseFloat(roundedTotalAmount.replace(/,/g,''));
         }
         setInterval(increment, 2000);
         
