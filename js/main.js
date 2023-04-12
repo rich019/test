@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.querySelector('.jackpot').innerHTML = '$' + roundedTotalAmount;
             roundedTotalAmount = parseFloat(roundedTotalAmount.replace(/,/g,''));
         }
-        setInterval(increment, 2000);
+        setInterval(increment, 3000);
         
         
     }).catch(function (err) {
